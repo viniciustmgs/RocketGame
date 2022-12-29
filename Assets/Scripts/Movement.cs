@@ -1,11 +1,12 @@
 using UnityEngine;
 
 public class Movement : MonoBehaviour
-{
+{   
+    float rocketThrust = 750f, rocketRotation = 150f;
     Rigidbody rocketRigidBody;
     Transform rocketTransform;
-    public AudioSource rocketThrustSound, rocketRotationSound;
-    float rocketThrust = 750f, rocketRotation = 150f;
+    AudioSource rocketThrustSound, rocketRotationSound;
+    
     // Start is called before the first frame update
     void Start()
     {
