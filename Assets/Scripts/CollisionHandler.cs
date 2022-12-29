@@ -8,7 +8,7 @@ public class CollisionHandler : MonoBehaviour
     void OnCollisionEnter(Collision other) {
         switch(other.gameObject.tag){
             case "Finish":
-                Debug.Log("You've reached the end");
+                LoadNextLevel();
                 break;
             case "Respawn":
                 break;    
@@ -20,6 +20,18 @@ public class CollisionHandler : MonoBehaviour
     }
 
     void ReloadLevel(){
-        SceneManager.LoadScene(0);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex);
+    }
+
+    void LoadNextLevel(){
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if(nextSceneIndex == SceneManager.sceneCountInBuildSettings){
+            SceneManager.LoadScene(0);
+        }
+        else{
+            SceneManager.LoadScene(nextSceneIndex);
+        }
+        
     }
 }

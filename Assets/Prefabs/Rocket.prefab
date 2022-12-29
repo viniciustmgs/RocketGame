@@ -42,11 +42,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9bb64ea2ca7b277278a8056d027cd37f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -170,11 +170,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 74c05d6f3ad9723cfbdec6e3d9c4c4f0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -270,6 +270,8 @@ GameObject:
   - component: {fileID: 8092461302428833474}
   - component: {fileID: 80782215}
   - component: {fileID: 80782214}
+  - component: {fileID: 1280094034}
+  - component: {fileID: 3113720667546974685}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -366,7 +368,7 @@ Rigidbody:
   m_GameObject: {fileID: 6903759065503776654}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 0.25
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -386,3 +388,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rocketThrustSound: {fileID: 0}
+  rocketRotationSound: {fileID: 0}
+--- !u!114 &1280094034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903759065503776654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e4237fcd698f4099c84451ed11791d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3113720667546974685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6903759065503776654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e4237fcd698f4099c84451ed11791d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
