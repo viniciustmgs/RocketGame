@@ -27,10 +27,10 @@ public class Movement : MonoBehaviour
         if(Input.GetKey(KeyCode.W)){
             rocketRigidBody.AddRelativeForce(Vector3.up * rocketThrust * Time.deltaTime);
             if(rocketThrustSound.volume == 0){
-                rocketThrustSound.volume = 1;
+                rocketThrustSound.volume = 0.8f;
             }
         }
-        else if(rocketThrustSound.volume == 1){
+        else if(rocketThrustSound.volume > 0){
             rocketThrustSound.volume = 0;
         }
     
