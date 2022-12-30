@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {   
     float reloadDelay = 1f, finishDelay = 2f;
-    Boolean levelIsFinished = false;
+    bool levelIsFinished = false;
     AudioSource rocketThrustSound, rocketRotationSound, successSound, crashSound;
 
     void Start(){
@@ -17,16 +17,20 @@ public class CollisionHandler : MonoBehaviour
         crashSound = GameObject.Find("CrashSound").GetComponentInChildren<AudioSource>();
     }
     void OnCollisionEnter(Collision other) {
-        switch(other.gameObject.tag){
+        
+        if(!levelIsFinished){
+            switch(other.gameObject.tag){
             case "Finish":
                 SuccessSequence();
                 break;
             case "Respawn":
                 break;    
             default:
-                if(!levelIsFinished) CrashSequence();
+                CrashSequence();
                 break;    
         }
+        }
+        
     }
 
     void SuccessSequence()
